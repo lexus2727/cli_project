@@ -4,8 +4,10 @@ require_relative '../lib/environment'
 
 require 'irb'
 
-puts "hello"
+#IRB.start(__FILE__)
 
-
+#puts "hello"
+#CLI.hello
+hello
 
 

@@ -10,3 +10,4 @@ module CliProject
 end
 
 require_relative './cli'
+require_relative './scraper'
