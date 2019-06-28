@@ -9,5 +9,7 @@ module CliProject
   # Your code goes here...
 end
 
-require_relative './cli'
+
 require_relative './scraper'
+require_relative './paris'
+require_relative './cli'

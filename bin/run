@@ -8,6 +8,7 @@ require 'irb'
 
 #puts "hello"
 CLI.new.call
+Paris.new.fun
 
 
 

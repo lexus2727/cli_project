@@ -9,13 +9,8 @@ class CLI
   
   def list_tours
   puts "Popular Paris Tours"
-  puts <<-DOC.gsub /^\s*/, ''
-    1. Moulin Rouge Show, 2 hours, $112
-    2. Louvre Tour, 3 hours, $70.55
-    3. Eiffel Tower, 1 hour, $86.75
-    4. Versailles Palace, 1 day, $49.16
-    5. Seine River Dinner Cruise, 2.5 hours, $79.81
-    DOC
+  
+    @tours = Paris.fun
   end
   
   def menu
