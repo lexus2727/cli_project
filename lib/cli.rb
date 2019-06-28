@@ -20,8 +20,8 @@ class CLI
   
   def menu
     input =nil
-    while input != "exit"
-    puts "Please enter the number for the tour, you would like more information on, list to see the tours again,or type exit to end:"
+  while input != "exit"
+    puts "Please enter the number for the tour you would like more information on or type exit to end:"
     input = gets.strip.downcase
     case input
     when "1"
@@ -34,7 +34,15 @@ class CLI
       puts "description of tour 4"
     when "5" 
       puts "description of tour 5"
+    else
+      puts "invalid number"
     end
   end
   # user gets back a brief description for the tour selected
+  end
+  
+  def bonjour
+    puts "Bonjour!"
+  end
+
 end
