@@ -11,5 +11,5 @@ end
 
 
 require_relative './scraper'
-require_relative './paris'
+require_relative './shoe'
 require_relative './cli'
