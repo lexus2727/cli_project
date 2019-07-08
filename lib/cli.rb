@@ -1,5 +1,7 @@
 class CLI
   
+  "Hello World"
+  
   def call
   
   list_tours
