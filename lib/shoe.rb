@@ -1,4 +1,4 @@
-class CoolShoes::Shoe
+class CliProject::Shoe
   attr_accessor :name, :price, :url, :description
   
   @@all = []

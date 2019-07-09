@@ -1,4 +1,4 @@
-class CoolShoes::CLI
+class CliProject::CLI
   
   def call
   CoolShoes::Scraper
