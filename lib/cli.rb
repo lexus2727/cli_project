@@ -1,7 +1,7 @@
 class CliProject::CLI
   
   def call
-  CoolShoes::Scraper
+  CliProject::Scraper
   list_shoes
   menu
   thanks
@@ -9,7 +9,7 @@ class CliProject::CLI
   
   def list_shoes
   puts "Men's Nike Shoes"
-  shoes = CoolShoes::Shoe.all
+  shoes = CliProject::Shoe.all
   shoes.each.with_index(1) {|s, index| puts "#{index}. #{s.name}- #{s.price}"
   end
   
@@ -20,7 +20,7 @@ class CliProject::CLI
     input = gets.strip.downcase
     
     if input.to_i > 0
-    selected = CoolShoes::Shoes.find_by_index(input.to_i - 1)
+    selected = CliProject::Shoes.find_by_index(input.to_i - 1)
     puts "#{selected.name} - #{selected.price}"
     puts "#{selected.description}"
     puts "To see shoe available shoe sizes and photos, go to #{selected.url}."

@@ -7,7 +7,7 @@ require 'irb'
 #IRB.start(__FILE__)
 
 #puts "hello"
-CoolShoes::CLI.new.call
+CliProject::CLI.new.call
 
 
 
