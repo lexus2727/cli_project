@@ -23,7 +23,7 @@ class CliProject::CLI
     selected = CliProject::Shoes.find_by_index(input.to_i - 1)
     puts "#{selected.name} - #{selected.price}"
     puts "To see shoe available shoe sizes and photos, go to #{selected.url}."
-    end
+    
     elsif input.downcase == "list"
     list_shoes
     else
