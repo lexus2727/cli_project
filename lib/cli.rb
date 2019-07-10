@@ -21,12 +21,18 @@ class CliProject::CLI
     
     if input.to_i > 0
     selected = CliProject::Shoe.find_by_index(input.to_i - 1)
+     if selected == nil
+       puts "Invalid entry. Please try again."
+     else
+       puts = " "
     puts "#{selected.name} - #{selected.price}"
     puts "To see shoe available shoe sizes and photos, go to #{selected.url}."
-    
+    puts " "
+    end
     elsif input.downcase == "list"
     list_shoes
     else
+    
     puts "Invalid entry. Please try again."
     end
     end 
