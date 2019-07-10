@@ -22,7 +22,6 @@ class CliProject::CLI
     if input.to_i > 0
     selected = CliProject::Shoes.find_by_index(input.to_i - 1)
     puts "#{selected.name} - #{selected.price}"
-    puts "#{selected.description}"
     puts "To see shoe available shoe sizes and photos, go to #{selected.url}."
     end
     elsif input.downcase == "list"

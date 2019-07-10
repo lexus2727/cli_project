@@ -28,17 +28,18 @@ end
 
 
 name = get_name
+binding.pry
 price = get_price
 url = get_url
 
 def get_shoes
-(0...prices.size).each do |index|
+(0...price.size).each do |index|
   puts "--- index: #{index +1} ---"
- puts "Name: #{names[index]} | Price: #{prices[index]}"
+ puts "Name: #{name[index]} | Price: #{price[index]}"
  puts "URL:  #{url[index]}"
  CliProject::Shoe.new(name, price, url)
   end
 end
-Scraper.new
-#binding.pry
+Scraper
+binding.pry
 end
