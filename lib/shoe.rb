@@ -1,5 +1,5 @@
 class CliProject::Shoe
-  attr_accessor :name, :price, :url, :description
+  attr_accessor :name, :price, :url
   
   @@all = []
   

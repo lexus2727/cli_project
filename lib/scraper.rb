@@ -26,7 +26,7 @@ end
 
 
 
-scraper = Scraper.new
+
 name = get_name
 price = get_price
 url = get_url
@@ -36,6 +36,7 @@ def get_shoes
   puts "--- index: #{index +1} ---"
  puts "Name: #{names[index]} | Price: #{prices[index]}"
  puts "URL:  #{url[index]}"
+ CliProject::Shoe.new(name, price, url)
   end
 end
 Scraper.new
