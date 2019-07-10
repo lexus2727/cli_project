@@ -3,11 +3,10 @@ class CliProject::Shoe
   
   @@all = []
   
-  def initialize(name, price, url, description)
+  def initialize(name, price, url)
     @name = name
     @price = price
     @url = url
-    @description = description
     save
   end 
  
