@@ -26,14 +26,14 @@ class CliProject::CLI
      else
        puts = " "
     puts "#{selected.name} - #{selected.price}"
-    puts "To see shoe available shoe sizes and photos, go to #{selected.url}."
+    puts "To see shoe available, shoe sizes and photos, go to #{selected.url}."
     puts " "
     end
     elsif input.downcase == "list"
     list_shoes
-    else
+    #else
     
-    puts "Invalid entry. Please try again."
+    #puts "Invalid entry. Please try again."
     end
     end 
     end
