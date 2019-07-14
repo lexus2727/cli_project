@@ -21,14 +21,19 @@ class CliProject::CLI
     
     if input.to_i > 0
     selected = CliProject::Shoe.find_by_index(input.to_i - 1)
+    selected.add_description(input.to_i)
+    
      if selected == nil
        puts "Invalid entry. Please try again."
      else
        #selected is now an instance of a shoe, we'll pass that entire instance to our scraper
-       CliProject::Scraper.get_shoe_details(selected)
+      # selected = CliProject::Scraper.get_shoe_details(selected)
        puts = " "
     puts "#{selected.name} - #{selected.price}"
+     puts = "\n"
+    puts "#{selected.description}"
     puts "To see shoe available, shoe sizes and photos, go to #{selected.url}."
+    
     #puts the details from the newly updated shoe instance
     puts " "
     end

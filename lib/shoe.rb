@@ -1,5 +1,5 @@
 class CliProject::Shoe
-  attr_accessor :name, :price, :url, :details
+  attr_accessor :name, :price, :url, :description
   
   @@all = []
   
@@ -20,7 +20,13 @@ class CliProject::Shoe
 
  def self.find_by_index(index)
  @@all[index]
+ end 
  
+ def add_description(index)
+   shoe = self.class.find_by_index(index)
+   self.description = CliProject::Scraper.get_shoe_details(shoe)
+   self.description
+end   
  
-  end
+      
   end
