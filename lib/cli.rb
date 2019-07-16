@@ -27,7 +27,6 @@ class CliProject::CLI
        #selected is now an instance of a shoe, we'll pass that entire instance to our scraper
         puts CliProject::Scraper.get_shoe_details(selected)
         puts  " "
-        
         puts "#{selected.name} - #{selected.price}"
         puts  "\n"
         puts "#{selected.description}"
