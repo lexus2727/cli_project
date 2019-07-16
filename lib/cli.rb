@@ -33,19 +33,17 @@ class CliProject::CLI
         puts = "\n"
         puts "#{selected.description}"
         puts "To see shoe available, shoe sizes and photos, go to #{selected.url}."
-    
-    #puts the details from the newly updated shoe instance
         puts " "
     end
       elsif input.downcase == "list"
         list_shoes
-    end
-    end 
-    end
+      end
+    end #end while
+  end
 
     def thanks
       puts "Please come again soon. Happy Shopping!"
     end
-    end
+  end
   
   
