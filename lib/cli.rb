@@ -39,15 +39,12 @@ class CliProject::CLI
     end
       elsif input.downcase == "list"
         list_shoes
-    #else
-    
-    #puts "Invalid entry. Please try again."
     end
     end 
     end
 
     def thanks
-    puts "Please come again soon. Happy Shopping!"
+      puts "Please come again soon. Happy Shopping!"
     end
     end
   
