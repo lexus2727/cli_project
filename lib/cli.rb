@@ -21,11 +21,9 @@ class CliProject::CLI
     
     if input.to_i > 0
       selected = CliProject::Shoe.find_by_index(input.to_i - 1)
-   
-    
       if selected == nil
         puts "Invalid entry. Please try again."
-     else
+      else
        #selected is now an instance of a shoe, we'll pass that entire instance to our scraper
         puts CliProject::Scraper.get_shoe_details(selected)
         puts = " "
