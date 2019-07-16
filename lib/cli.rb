@@ -32,8 +32,8 @@ class CliProject::CLI
         puts "#{selected.description}"
         puts "To see shoe available, shoe sizes and photos, go to #{selected.url}."
         puts " "
-    end
-      elsif input.downcase == "list"
+      end
+    elsif input.downcase == "list"
         list_shoes
       end
     end #end while
