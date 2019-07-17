@@ -17,7 +17,7 @@ end
 
 def self.get_shoe_details(shoe)
   doc = Nokogiri::HTML(open(shoe.url,'User-Agent' => 'ruby'))
-  shoe_details = doc.css(".pi-sub-title p").text
+  shoe.description = doc.css(".pi-sub-title p").text
   #update the details property on the shoe object that was passed in as an arguement to equal the newly scraped details
  #binding.pry 
 end
