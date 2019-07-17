@@ -2,11 +2,6 @@
 
 require_relative '../lib/environment'
 
-require 'irb'
-
-#IRB.start(__FILE__)
-
-#puts "hello"
 CliProject::CLI.new.call
 
 
