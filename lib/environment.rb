@@ -1,15 +1,11 @@
+require 'bundler/setup'
 require 'open-uri'
 require 'nokogiri'
 require 'pry'
+Bundler.require(:default, :development)
+
 
 require_relative "cli_project/version"
-
-module CliProject
-  class Error < StandardError; end
-  # Your code goes here...
-end
-
-
 require_relative './scraper'
 require_relative './shoe'
 require_relative './cli'
