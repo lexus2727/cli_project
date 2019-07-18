@@ -10,23 +10,21 @@ class CliProject::Shoe
     save
   end 
  
- def self.all
+  def self.all
    @@all
- end
-  
- def save
-  self.class.all << self
- end
-
- def self.find_by_index(index)
- @@all[index]
- end 
- 
- def add_description(index)
-   shoe = self.class.find_by_index(index)
-   self.description = CliProject::Scraper.get_shoe_details(shoe)
-   self.description
-end   
- 
-      
   end
+  
+  def save
+  self.class.all << self
+  end
+
+  def self.find_by_index(index)
+    @@all[index]
+  end 
+ 
+  def add_description(index)
+    shoe = self.class.find_by_index(index)
+    self.description = CliProject::Scraper.get_shoe_details(shoe)
+    self.description
+  end   
+end
