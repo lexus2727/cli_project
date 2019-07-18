@@ -4,7 +4,7 @@ class CliProject::CLI
     CliProject::Scraper.get_page
     list_shoes
     menu
-    thanks
+    
   end
   
   def list_shoes
@@ -14,31 +14,30 @@ class CliProject::CLI
   end
   
   def menu
-    input =nil
+    input = nil
+    
   while input != "exit"
-    puts "Please enter the number for the shoes you would like more information on or type exit to end:"
+    puts "\nPlease enter the number for the shoes you would like more information on or type exit to end:"
     input = gets.strip.downcase
     
-    if input.to_i > 0
+  case 
+    when input.to_i.between?(1, CliProject::Shoe.all.size) 
       selected = CliProject::Shoe.find_by_index(input.to_i - 1)
-      if selected == nil
-        puts "Invalid entry. Please try again."
-      else
-       #selected is now an instance of a shoe, we'll pass that entire instance to our scraper
-        updated_selected = CliProject::Scraper.get_shoe_details(selected)
-        #puts  " "
-        #puts "#{selected.name} - #{selected.price}"
-        #puts  "\n"
-        puts "Description - #{selected.description}"
-        puts "To see shoe available, shoe sizes and photos, go to #{selected.url}."
-        puts " "
-      end
-    elsif input.downcase == "list"
-        list_shoes
-      end
-    end #end while
+      updated_selected = CliProject::Scraper.get_shoe_details(selected)
+        
+      puts "Description - #{selected.description}"
+      puts "\nTo see shoe available, shoe sizes and photos, go to #{selected.url}."
+    when input == "list"
+      list_shoes
+    when input == "exit"
+      thanks
+    else
+      puts "Invalid entry. Reloading list...."
+      sleep 1.5
+      list_shoes
+    end
   end
-
+end
     def thanks
       puts "Please come again soon. Happy Shopping!"
     end
